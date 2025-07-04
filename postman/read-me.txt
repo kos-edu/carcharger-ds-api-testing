@@ -1,0 +1,13 @@
+api-testing-repo/
+├── README.md
+├── postman/
+│   ├── collections/
+│   │   └── carcharger ds api tesing.postman_collection.json
+│   ├── environments/
+│   │   └── carcharger de api environment.postman_environment.json
+│   └── globals/
+│       └── shared-variables.postman_globals.json
+├── docs/
+│   └── api-documentation.md
+└── scripts/
+    └── newman-runner.js

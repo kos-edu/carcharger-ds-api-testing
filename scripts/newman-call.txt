@@ -1,0 +1,1 @@
+newman run carcharger_ds_api_testing.postman_collection.json

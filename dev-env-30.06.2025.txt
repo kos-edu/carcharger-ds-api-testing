@@ -1,0 +1,5 @@
+Eclipse IDE for Java Developers 2025-06 
+java version "24.0.1" 2025-04-15
+Spring Tools (aka Spring Tool Suite) 4.31.0.Release
+GitHub Client - manual installation : Version 3.5.0 (x64)
+Postman 11.49.4

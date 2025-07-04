@@ -1,0 +1,484 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-1234-5678f9g0h1i2",
+    "name": "CarCharger DS API Tests",
+    "description": "System tests for CarCharger DS REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Initial Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/status",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "status"]
+        }
+      },
+      "response": [
+        {
+          "name": "Initial Status",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "status"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "INITIAL_STATE"
+        }
+      ]
+    },
+    {
+      "name": "Power On",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"POWER_ON\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Power On Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"POWER_ON\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "POWER_PRESENT"
+        }
+      ]
+    },
+    {
+      "name": "Ready to Charge",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"READY_TO_CHARGE\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Ready to Charge Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"READY_TO_CHARGE\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "READY_TO_CHARGE"
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Connected",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"VEHICLE_CONNECTED\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Vehicle Connected Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"VEHICLE_CONNECTED\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "VEHICLE_CONNECTED"
+        }
+      ]
+    },
+    {
+      "name": "Start Charging",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"START_CHARGING\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Start Charging Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"START_CHARGING\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "VEHICLE_CHARGING"
+        }
+      ]
+    },
+    {
+      "name": "Stop Charging",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"STOP_CHARGING\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Stop Charging Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"STOP_CHARGING\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "VEHICLE_CONNECTED"
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Disconnected",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"VEHICLE_DISCONNECTED\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Vehicle Disconnected Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"VEHICLE_DISCONNECTED\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "READY_TO_CHARGE"
+        }
+      ]
+    },
+    {
+      "name": "Power Off",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"POWER_OFF\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Power Off Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"POWER_OFF\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "POWER_OFF"
+        }
+      ]
+    },
+    {
+      "name": "Failure Scenario",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\"FAILURE\""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/event",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "event"]
+        }
+      },
+      "response": [
+        {
+          "name": "Failure Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"FAILURE\""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "event"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "TROUBLE"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
