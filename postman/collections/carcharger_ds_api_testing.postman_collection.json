@@ -473,6 +473,114 @@
           "body": "TROUBLE"
         }
       ]
+    },
+    {
+      "name": "Get All States",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/states",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "states"]
+        }
+      },
+      "response": [
+        {
+          "name": "All States Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/states",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "states"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "[\"INITIAL_STATE\",\"POWER_OFF\",\"POWER_PRESENT\",\"READY_TO_CHARGE\",\"VEHICLE_CONNECTED\",\"VEHICLE_CHARGING\",\"TROUBLE\"]"
+        }
+      ]
+    },
+    {
+      "name": "Get All States Detailed",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/states/detailed",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "states", "detailed"]
+        }
+      },
+      "response": [
+        {
+          "name": "Detailed States Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/states/detailed",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "states", "detailed"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "[{\"id\":\"INITIAL_STATE\",\"name\":\"Initial State\",\"description\":\"Charger is in its initial state after startup\"},{\"id\":\"POWER_OFF\",\"name\":\"Power Off\",\"description\":\"Charger has no power\"},{\"id\":\"POWER_PRESENT\",\"name\":\"Power Present\",\"description\":\"Charger has power but not ready to charge\"},{\"id\":\"READY_TO_CHARGE\",\"name\":\"Ready to Charge\",\"description\":\"Charger is ready for vehicle connection\"},{\"id\":\"VEHICLE_CONNECTED\",\"name\":\"Vehicle Connected\",\"description\":\"Vehicle is connected but not charging\"},{\"id\":\"VEHICLE_CHARGING\",\"name\":\"Vehicle Charging\",\"description\":\"Vehicle is actively charging\"},{\"id\":\"TROUBLE\",\"name\":\"Trouble\",\"description\":\"Charger has detected a problem\"}]"
+        }
+      ]
+    },
+    {
+      "name": "Get All Events Detailed",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/charger/events/detailed",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "charger", "events", "detailed"]
+        }
+      },
+      "response": [
+        {
+          "name": "Detailed Events Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/charger/events/detailed",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "charger", "events", "detailed"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "[{\"id\":\"power_on\",\"name\":\"Power On\",\"description\":\"Charger receives power\"},{\"id\":\"ready_to_charge\",\"name\":\"Ready to Charge\",\"description\":\"Charger is prepared for charging\"},{\"id\":\"vehicle_disconnected\",\"name\":\"Vehicle Disconnected\",\"description\":\"Vehicle is unplugged\"},{\"id\":\"start_charging\",\"name\":\"Start Charging\",\"description\":\"Charging process begins\"},{\"id\":\"stop_charging\",\"name\":\"Stop Charging\",\"description\":\"Charging process stops\"},{\"id\":\"vehicle_connected\",\"name\":\"Vehicle Connected\",\"description\":\"Vehicle is plugged in\"},{\"id\":\"failure\",\"name\":\"Failure\",\"description\":\"Charger detected a problem\"},{\"id\":\"power_off\",\"name\":\"Power Off\",\"description\":\"Charger loses power\"}]"
+        }
+      ]
     }
   ],
   "variable": [
